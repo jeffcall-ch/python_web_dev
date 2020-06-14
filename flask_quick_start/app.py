@@ -17,5 +17,5 @@ if __name__ == "main":
     app.run()
 
 #to get it run use terminal https://flask.palletsprojects.com/en/1.1.x/quickstart/
-#$ export FLASK_APP=app.py
+#$ export FLASK_APP=app.py - nor necessarliy needed. Only if calling different than app.py
 #$ flask run
