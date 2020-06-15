@@ -12,10 +12,23 @@ app = Flask(__name__)
 def hello_world():
     return "Hello World!"
 
+@app.route("/test/<search_query>")
+def search(search_query):
+    return search_query
+
+@app.route("/integer/<int:value>")
+def int_type(value):
+    print (value + 1)
+    return "correct"
+
+@app.route("/name/<name>")
+def index(name):
+    if name.lower() == "michael":
+        # return "Hello, {}".format(name), 200
+        return f"Hello, {name}", 200
+    else:
+        return "Not found", 404
+
 #start the dev server
 if __name__ == "main":
     app.run()
-
-#to get it run use terminal https://flask.palletsprojects.com/en/1.1.x/quickstart/
-#$ export FLASK_APP=app.py - nor necessarliy needed. Only if calling different than app.py
-#$ flask run
