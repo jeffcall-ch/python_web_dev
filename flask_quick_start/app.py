@@ -5,7 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # error handling
-app.config["DEBUG"] = True
+
 
 # define the view using a function to return a string
 # use decorator to link to an url
@@ -13,7 +13,7 @@ app.config["DEBUG"] = True
 @app.route("/hello")
 # define the view using a function to return a string
 def hello_world():
-    return "Hello World! and"
+    return "Hello World! and is and is this"
 
 
 @app.route("/test/<search_query>")
